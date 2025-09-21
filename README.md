@@ -28,8 +28,8 @@ Create a `.env` file in project root with these keys (example):
 PORT=5000
 MONGODB_URI=mongodb+srv://<user>:<pass>@cluster0.mongodb.net/yourdb
 VIDEO_ID=<YOUR_UPLOADED_VIDEO_ID>
-YOUTUBE_API_KEY=<YOUR_SERVER_API_KEY>         # optional for read-only comment listing
-YOUTUBE_ACCESS_TOKEN=<OAUTH_ACCESS_TOKEN>     # required for comment create/delete, update video
+YOUTUBE_API_KEY=<YOUR_API_KEY>         # for read-only comment listing
+YOUTUBE_ACCESS_TOKEN=<OAUTH_ACCESS_TOKEN>     # for comment create/delete, update video
 CLIENT_ID=<YOUR_GOOGLE_CLIENT_ID>      # for oauth-get-tokens.js helper
 CLIENT_SECRET=<YOUR_GOOGLE_CLIENT_SECRET>
 OAUTH_REDIRECT_URI=http://localhost:5000/oauth2callback
