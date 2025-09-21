@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YouTube Companion Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">YC</div>
+        <div>
+          <h1 class="app-title">YouTube Companion Dashboard</h1>
+          <p class="app-sub">Moderation, notes & quick video management</p>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <input id="globalSearch" class="search" type="search" placeholder="Search notes..." aria-label="Search notes" />
+        <button id="searchBtn" class="btn accent">Search</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- LEFT: video details and comments -->
+      <section class="left-col">
+        <div class="card video-card" aria-live="polite">
+          <div class="thumb" id="thumb">Loading thumbnail…</div>
+          <div class="meta">
+            <div class="meta-top">
+              <h2 id="videoTitle">Loading title…</h2>
+              <div id="videoChannel" class="muted small"></div>
+            </div>
+
+            <div class="meta-stats">
+              <div id="viewCount" class="pill">0 views</div>
+              <div id="mfkBadge" class="pill muted">Audience: checking…</div>
+              <div id="videoId" class="muted small">ID: -</div>
+            </div>
+
+            <div class="desc card-section" id="videoDesc">Loading description…</div>
+
+            <div class="card-section">
+              <form id="commentForm" class="form-inline" aria-label="Post comment">
+                <input id="commentInput" type="text" placeholder="Write a comment…" required />
+                <button class="btn accent" type="submit">Post</button>
+              </form>
+
+              <div id="commentsWrap" class="comments-section">
+                <h3 class="section-title">Comments</h3>
+                <div id="comments" class="comments-list">Loading comments…</div>
+                <div id="commentsNotice" class="muted small" style="display:none;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card activity-card">
+          <h3 class="section-title">Activity</h3>
+          <div id="activity" class="muted">No recent actions</div>
+        </div>
+      </section>
+
+      <!-- RIGHT: notes and utilities -->
+      <aside class="right-col">
+        <div class="card">
+          <h3 class="section-title">Quick Notes</h3>
+          <form id="noteForm" class="note-form" aria-label="Add note">
+            <textarea id="noteInput" placeholder="Add a quick note…" rows="4"></textarea>
+            <input id="tagInput" type="text" placeholder="tags (comma separated)" />
+            <div style="display:flex;gap:10px;margin-top:8px;">
+              <button class="btn accent" type="submit">Save</button>
+              <button class="btn" id="clearNotes">Clear UI</button>
+            </div>
+          </form>
+
+          <div style="margin-top:12px">
+            <h4 class="section-sub">Notes</h4>
+            <div id="notesList" class="notes-list">Loading notes…</div>
+          </div>
+        </div>
+
+        <div class="card tips">
+          <h4 class="section-sub">Tips</h4>
+          <ul class="muted small">
+            <li>Made for Kids (MFK) videos have comments disabled by policy.</li>
+            <li>You can only delete comments you own or comments on your channel.</li>
+            <li>Use the search box to filter notes quickly.</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer muted small">
+      Submission for Cactro’s Full-Stack Development Assessment
+    </footer>
+  </div>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
